@@ -1,0 +1,42 @@
+[
+  {
+    "id": "full-set",
+    "name": "Full Graduation Set",
+    "price": 900,
+    "description": "Complete regalia package including premium gown, cap with tassel, belt, and stole. Perfect for your graduation ceremony.",
+    "image": "/images/products/full-set.jpg",
+    "alt": "Complete graduation set with gown, cap and belt",
+    "inStock": true,
+    "category": "set"
+  },
+  {
+    "id": "gown",
+    "name": "Graduation Gown",
+    "price": 700,
+    "description": "High-quality satin-finish graduation gown with reinforced stitching. Available in black with university color accents.",
+    "image": "/images/products/gown.jpg",
+    "alt": "Black graduation gown with gold trim",
+    "inStock": true,
+    "category": "gown"
+  },
+  {
+    "id": "belt",
+    "name": "Graduation Belt",
+    "price": 250,
+    "description": "Adjustable woven belt with metallic clasp. Matches standard graduation regalia sets perfectly.",
+    "image": "/images/products/belt.jpg",
+    "alt": "Graduation belt with gold clasp",
+    "inStock": true,
+    "category": "accessory"
+  },
+  {
+    "id": "cap",
+    "name": "Graduation Cap (Mortarboard)",
+    "price": 200,
+    "description": "Structured mortarboard cap with elastic strap and gold tassel. One size fits all.",
+    "image": "/images/products/cap.jpg",
+    "alt": "Graduation cap with gold tassel",
+    "inStock": true,
+    "category": "accessory"
+  }
+]
