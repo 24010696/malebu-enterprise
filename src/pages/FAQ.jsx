@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { ChevronDown, ChevronUp, MessageCircle } from 'lucide-react'
 const faqs = [
-  { q: "How long does delivery take?", a: "Local pickup in Thohoyandou is ready in 1-2 days. Delivery across Limpopo takes 2-4 business days." },
+  { q: "How long does delivery take?", a: "Local pickup in Thohoyandou is ready in 1-2 days. Delivery for other places takes 2-4 business days through Pexi." },
   { q: "Do you offer pickup?", a: "Yes! Convenient pickup in Thohoyandou. We'll share location and time slots after confirmation." },
   { q: "Are gowns university compliant?", a: "Absolutely. Meets standard South African university requirements. Let us know specific colors." },
   { q: "Payment methods?", a: "Bank transfer (EFT), cash on pickup, or mobile payments. Proof of payment required." },
