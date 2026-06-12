@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://6a2bded9823b8e0008f09e5b--malebu.netlify.app/sitemap.xml
