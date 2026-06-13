@@ -53,7 +53,7 @@ export default function Footer() {
             <h3 className="text-brand-gold font-heading font-semibold mb-3">Products</h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>Full Set — R900</li>
-              <li>Gown — R700</li>
+              <li>Gown — R500</li>
               <li>Belt — R250</li>
               <li>Cap — R200</li>
             </ul>
