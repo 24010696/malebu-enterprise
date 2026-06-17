@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
-import Lightbox from "../components/LightBox";
+import Lightbox from "../components/Lightbox";
 
 // Add all your gallery image paths here
 const galleryImages = [
