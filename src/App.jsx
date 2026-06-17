@@ -8,6 +8,8 @@ import Products from './pages/Products'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
 import FAQ from './pages/FAQ'
+import Universities from './pages/Universities'
+import UniversityDetail from './pages/UniversityDetail'
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/universities" element={<Universities />} />
+          <Route path="/universities/:id" element={<UniversityDetail />} />
         </Routes>
       </main>
       <Footer />

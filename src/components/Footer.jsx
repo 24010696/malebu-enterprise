@@ -1,34 +1,18 @@
 import { Link } from 'react-router-dom'
-import { GraduationCap, Phone, Mail, MapPin, Globe, Share2 } from 'lucide-react'
+import { GraduationCap, Phone, Mail, MapPin } from 'lucide-react'
 
 export default function Footer() {
   const PHONE_NUMBER = '27823670490'
   const EMAIL = 'info@malebuentreprise.co.za'
   const INSTAGRAM = 'https://instagram.com/malebuentreprise'
-  const FACEBOOK = 'https://www.facebook.com/groups/1242337173812892'
+  const FACEBOOK = 'https://facebook.com/malebuentreprise'
 
   return (
     <footer className="bg-brand-dark text-white pt-12 pb-6 px-4 border-t border-brand-gold/20">
       <div className="max-w-7xl mx-auto">
-        {/* Quick Contact Buttons */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-          <a href={`tel:+${PHONE_NUMBER}`} className="flex items-center justify-center gap-2 bg-brand-gold text-brand-dark py-3 rounded-lg font-semibold hover:bg-yellow-500 transition">
-            <Phone size={18} /> Call Now
-          </a>
-          <a href={`mailto:${EMAIL}`} className="flex items-center justify-center gap-2 bg-white text-brand-dark py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-            <Mail size={18} /> Email Us
-          </a>
-          <a href={INSTAGRAM} target="_blank" rel="noopener" className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg font-semibold hover:opacity-90 transition">
-            <Share2 size={18} /> Instagram
-          </a>
-          <a href={FACEBOOK} target="_blank" rel="noopener" className="flex items-center justify-center gap-2 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-            <Globe size={18} /> Facebook
-          </a>
-        </div>
-
         <div className="grid md:grid-cols-4 gap-8 mb-8">
-          {/* Logo & Slogan */}
-          <div className="md:col-span-1">
+          {/* Logo */}
+          <div>
             <Link to="/" className="inline-flex items-center gap-2 mb-3">
               <GraduationCap size={24} className="text-brand-gold" />
               <span className="text-xl font-heading font-bold text-brand-gold">MALEBU</span>
@@ -42,7 +26,8 @@ export default function Footer() {
             <h3 className="text-brand-gold font-heading font-semibold mb-3">Quick Links</h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><Link to="/" className="hover:text-white transition">Home</Link></li>
-              <li><Link to="/products" className="hover:text-white transition">Products</Link></li>
+             
+              <li><Link to="/universities" className="hover:text-white transition">Universities</Link></li>
               <li><Link to="/about" className="hover:text-white transition">About Us</Link></li>
               <li><Link to="/contact" className="hover:text-white transition">Contact</Link></li>
             </ul>
@@ -52,36 +37,74 @@ export default function Footer() {
           <div>
             <h3 className="text-brand-gold font-heading font-semibold mb-3">Products</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>Full Set — R900</li>
-              <li>Gown — R700</li>
-              <li>Belt — R250</li>
-              <li>Cap — R200</li>
+              <li>Full Set — R900-R1000</li>
+              <li>Gown — R550</li>
+              <li>Cap — R250</li>
+              <li>Belt — R200-R400</li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contact - With Social Links */}
           <div>
             <h3 className="text-brand-gold font-heading font-semibold mb-3">Contact</h3>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li className="flex items-center gap-2">
-                <Phone size={16} className="text-brand-gold" />
-                <a href={`tel:+${PHONE_NUMBER}`} className="hover:text-white">+27 82 367 0490</a>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-2 text-gray-400 hover:text-white transition">
+                  <Phone size={16} className="text-brand-gold" />
+                  <span>+27 82 367 0490</span>
+                </a>
               </li>
-              <li className="flex items-center gap-2">
-                <Mail size={16} className="text-brand-gold" />
-                <a href={`mailto:${EMAIL}`} className="hover:text-white">{EMAIL}</a>
+              <li>
+                <a href={`mailto:${EMAIL}`} className="flex items-center gap-2 text-gray-400 hover:text-white transition">
+                  <Mail size={16} className="text-brand-gold" />
+                  <span>info@malebuentreprise.co.za</span>
+                </a>
               </li>
-              <li className="flex items-center gap-2">
-                <MapPin size={16} className="text-brand-gold" />
+              <li className="flex items-start gap-2 text-gray-400">
+                <MapPin size={16} className="text-brand-gold mt-0.5 shrink-0" />
                 <span>Thohoyandou, Limpopo</span>
               </li>
             </ul>
+
+            {/* Social Media - Using Inline SVGs for 100% reliability */}
+            <div className="mt-4 pt-4 border-t border-gray-800">
+              <p className="text-sm text-gray-400 mb-3">Follow Us</p>
+              <div className="space-y-3">
+                <a 
+                  href={INSTAGRAM} 
+                  target="_blank" 
+                  rel="noopener" 
+                  className="flex items-center gap-2 text-gray-400 hover:text-pink-500 transition"
+                >
+                  {/* Real Instagram Icon SVG */}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                  </svg>
+                  <span>Instagram</span>
+                </a>
+                
+                <a 
+                  href={FACEBOOK} 
+                  target="_blank" 
+                  rel="noopener" 
+                  className="flex items-center gap-2 text-gray-400 hover:text-blue-500 transition"
+                >
+                  {/* Real Facebook Icon SVG */}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-6 flex justify-between items-center">
+        {/* Copyright */}
+        <div className="border-t border-gray-800 pt-6 text-center">
           <p className="text-gray-500 text-sm">© {new Date().getFullYear()} Malebu Enterprise. All rights reserved.</p>
-          <a href="#" className="text-gray-400 hover:text-brand-gold transition"><Globe size={18} /></a>
         </div>
       </div>
     </footer>

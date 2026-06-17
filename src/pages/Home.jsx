@@ -38,6 +38,30 @@ export default function Home() {
             </div>
           ))}
         </div>
+              {/* Referral Program Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-brand-dark to-gray-900 text-white mt-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-heading text-brand-gold mb-4">Refer a Friend, Get R50! 💸</h2>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            Love your Malebu regalia? Tell your classmates! For every friend you refer who buys a Full Set, you get <span className="text-brand-gold font-bold">R50 off</span> your next order (or cash back!).
+          </p>
+          
+          <div className="flex flex-col md:flex-row justify-center gap-4">
+            <a 
+              href={`https://wa.me/27823670490?text=${encodeURIComponent('Hi Malebu! I want to refer a friend for graduation regalia and claim my R50.')}`} 
+              target="_blank" 
+              rel="noopener" 
+              className="bg-brand-gold text-brand-dark px-8 py-3 rounded-xl font-bold hover:bg-yellow-500 transition shadow-lg"
+            >
+              Refer a Friend Now
+            </a>
+          </div>
+          
+          <p className="text-sm text-gray-500 mt-6">
+            *Terms apply. R50 reward is given once the referred friend completes their purchase.
+          </p>
+        </div>
+      </section>
       </section>
     </main>
   )

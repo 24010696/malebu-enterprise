@@ -1,36 +1,64 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { GraduationCap, Menu, X } from 'lucide-react'
+import { useState } from 'react'
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+
+  // Notice the commas at the end of every line!
   const links = [
-    { to: '/', label: 'Home' }, { to: '/about', label: 'About' },
-    { to: '/products', label: 'Products' }, { to: '/gallery', label: 'Gallery' },
-    { to: '/contact', label: 'Contact' }, { to: '/faq', label: 'FAQ' }
+    { name: 'Home', href: '/' },
+    
+    { name: 'Universities', href: '/universities' },
+    { name: 'Gallery', href: '/gallery' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'FAQ', href: '/faq' }
   ]
-  const waLink = 'https://wa.me/27823670490?text=Hello%20Malebu%20Enterprise%2C%20I%20need%20help%20with%20graduation%20regalia.'
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur-md border-b border-brand-gold/20 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-3 hover:opacity-90 transition">
-          <img src="/logo/malebu-logo.png" alt="Malebu Enterprise" className="h-10 md:h-12 w-auto" />
-          <div className="hidden sm:block">
-            <span className="block text-lg font-heading font-bold text-brand-gold tracking-wider leading-none">MALEBU</span>
-            <span className="block text-xs text-gray-400 tracking-widest uppercase">Enterprise</span>
-          </div>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md border-b border-brand-gold/20">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-2">
+          <GraduationCap size={32} className="text-brand-gold" />
+          <span className="text-xl font-heading font-bold text-brand-dark">MALEBU</span>
         </Link>
-        <div className="hidden md:flex gap-6 text-sm font-medium text-gray-300 items-center">
-          {links.map(l => <Link key={l.to} to={l.to} className="hover:text-brand-gold transition">{l.label}</Link>)}
-          <a href={waLink} target="_blank" rel="noopener" className="bg-brand-gold text-brand-dark px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition">Order Now</a>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-6">
+          {links.map((link) => (
+            <Link
+              key={link.name}
+              to={link.href}
+              className="text-gray-600 hover:text-brand-gold font-medium transition"
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
-        <button onClick={() => setOpen(!open)} className="md:hidden text-brand-gold p-2">{open ? <X size={24} /> : <Menu size={24} />}</button>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-brand-dark"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
-      {open && (
-        <div className="md:hidden bg-brand-dark border-t border-gray-800">
-          {links.map(l => <Link key={l.to} to={l.to} onClick={() => setOpen(false)} className="block px-6 py-4 text-gray-300 hover:text-brand-gold border-b border-gray-800/50">{l.label}</Link>)}
-          <a href={waLink} target="_blank" rel="noopener" className="block px-6 py-4 bg-brand-gold text-brand-dark font-semibold text-center">Order on WhatsApp</a>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-3">
+          {links.map((link) => (
+            <Link
+              key={link.name}
+              to={link.href}
+              className="block text-gray-600 hover:text-brand-gold font-medium transition"
+              onClick={() => setIsOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
       )}
     </nav>
