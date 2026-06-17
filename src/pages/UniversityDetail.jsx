@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft, MessageCircle, GraduationCap, DollarSign } from 'lucide-react'
-import Lightbox from "../components/LightBox";
+import Lightbox from "../components/Lightbox";
 
 const PHONE_NUMBER = '27823670490'
 
