@@ -51,4 +51,4 @@ export default function Lightbox({ images, currentIndex, onClose, onNext, onPrev
       )}
     </div>
   )
-}a
+}
